@@ -1,0 +1,1 @@
+print(str.isalnum("Thisisalphanumericstring123"))
