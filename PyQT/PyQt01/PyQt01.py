@@ -1,10 +1,11 @@
 import sys
 from PyQt6 import QtWidgets
-from PyQt6.QtWidgets import QApplication, QLabel, QWidget, QPushButton
+# from PyQt6.QtWidgets import QApplication
 from app_controller import AppController
 from sampleUi01 import Ui_MainWindow  # <-- import the class
 
-app = QApplication([])
+# app = QApplication([])
+app = QtWidgets.QApplication(sys.argv)
 
 # window = QWidget()
 # window.setWindowTitle("PyQt App")
@@ -20,11 +21,9 @@ controller = AppController(app)  # <-- pass app to controller
 
 # window.show()
 
-import sys
-app = QtWidgets.QApplication(sys.argv)
+# import sys
 MainWindow = QtWidgets.QMainWindow()
 ui = Ui_MainWindow(controller)  # <-- pass controller to Ui_MainWindow
 ui.setupUi(MainWindow)
 MainWindow.show()
-sys.exit(app.exec())
 sys.exit(app.exec())
